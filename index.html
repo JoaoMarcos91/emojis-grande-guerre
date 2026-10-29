@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Emojis de la Grande Guerre">
+<meta property="og:image" content="img/soldado.png">
+<title>Emojis de la Grande Guerre</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+img{max-width:100%}
+/* Layout: 2x2 grid of sticker cards, name and caption under each */
+:root {
+  --bg: #ECE6D6;
+  --paper: #F7F3E8;
+  --ink: #2B2A22;
+  --muted: #6A6450;
+  --line: #CFC6AC;
+  --font-display: "Special Elite", "Courier New", monospace;
+  --font-body: "Source Sans 3", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #1B1C17; --paper: #25261F; --ink: #ECE6D6; --muted: #A69F88; --line: #3A3B31; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #1B1C17; --paper: #25261F; --ink: #ECE6D6; --muted: #A69F88; --line: #3A3B31; color-scheme: dark; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 40px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: grid; gap: 6px; justify-items: center; text-align: center; }
+.card img { width: 100%; max-width: 220px; aspect-ratio: 1; height: auto; }
+.card h2 { font-family: var(--font-display); font-weight: 400; font-size: 20px; margin: 0; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 420px) { .grid { gap: 10px; } .card { padding: 10px; } .card h2 { font-size: 17px; } .card p { font-size: 13px; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="grid" aria-label="Emojis de la Grande Guerre">
+    <article class="card">
+      <img src="img/granada.png" alt="Emoji d'une grenade vert olive avec un anneau doré">
+      <h2>Grenade</h2>
+      <p>Grenade Mills, utilisée dans les tranchées</p>
+    </article>
+    <article class="card">
+      <img src="img/soldado.png" alt="Emoji d'un soldat moustachu avec un casque Brodie">
+      <h2>Soldat</h2>
+      <p>Casque Brodie et uniforme kaki</p>
+    </article>
+    <article class="card">
+      <img src="img/mascara.png" alt="Emoji d'un masque à gaz avec des verres ronds">
+      <h2>Masque à gaz</h2>
+      <p>Protection contre les attaques chimiques</p>
+    </article>
+    <article class="card">
+      <img src="img/biplano.png" alt="Emoji d'un biplan rouge">
+      <h2>Biplan</h2>
+      <p>Les premiers avions de combat</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>
